@@ -32,9 +32,20 @@
             }).ToList();
         }
 
-        public void Insert()
+        public FlightListEntity Get(int id)
         {
-            
+            return this.flightRepository.GetAll().Select(f => new FlightListEntity
+            {
+                Id = f.Id,
+                CountryFrom = f.AirportFrom.Country.Name,
+                AirportFrom = f.AirportFrom.Name,
+                CountryTo = f.AirportTo.Country.Name,
+                AirportTo = f.AirportTo.Name,
+                LeavingTime = f.LeavingTime,
+                Arrives = f.Arrives,
+                Name = f.Name,
+                Coast = f.Coast
+            }).FirstOrDefault(f => f.Id == id);
         }
     }
 }

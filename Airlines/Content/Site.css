@@ -42,3 +42,15 @@ textarea {
 .filter {
     background: #00b1dd;
 }
+
+.details > div > span {
+    font-size: 36px;
+}
+
+.my-btn {
+    background: #feba31 !important;
+}
+
+.my-btn:hover {
+    background: #fec146 !important;
+}
