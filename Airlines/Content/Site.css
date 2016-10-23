@@ -54,3 +54,25 @@ textarea {
 .my-btn:hover {
     background: #fec146 !important;
 }
+
+.buy-form > div {
+    display: flex;
+}
+
+.buy-form > div > .firstcol {
+    width: 30%;
+}
+
+.buy-form > div > .secondcol {
+    width: 70%;
+    height: 30px;
+    margin: auto 0;
+    width: 100%;
+    font-size: 22px;
+    padding: 14px;
+    border-radius: 4px;
+}
+
+.error {
+    border-color: red;
+}

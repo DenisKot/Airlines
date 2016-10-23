@@ -20,5 +20,14 @@
 
             return View();
         }
+
+        // GET: Buy
+        public ActionResult Buy(int id)
+        {
+            var model = this.flightsService.Get(id);
+            this.ViewBag.model = model;
+
+            return View();
+        }
     }
 }

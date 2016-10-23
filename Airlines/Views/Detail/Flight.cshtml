@@ -1,6 +1,6 @@
 ﻿@using _00.Common
 @{
-    ViewBag.Title = "title";
+    ViewBag.Title = "Деталі рейсу";
 }
 
 <div class="container" style="padding-top: 72px;">
@@ -33,7 +33,9 @@
         </div>
 
         <div class="col-md-6 col-centered">
-            <button type="button" class="btn btn-warning my-btn" style="font-size: 28px; width: 280px; height: 60px; margin-top: 232px;">ЗАМОВИТИ <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            <a href="@Url.Action("Buy", "Detail", new {id = ViewBag.model.Id})">
+                <button type="button" class="btn btn-warning my-btn" style="font-size: 28px; width: 280px; height: 60px; margin-top: 232px;">ЗАМОВИТИ <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+            </a>
         </div>
     </div>
 </div>

@@ -27,7 +27,7 @@
                 AirportTo = f.AirportTo.Name,
                 LeavingTime = f.LeavingTime,
                 Arrives = f.Arrives,
-                Name = f.Name,
+                Name = f.AirportFrom.Name + " - " + f.AirportTo.Name,
                 Coast = f.Coast
             }).ToList();
         }
@@ -43,7 +43,7 @@
                 AirportTo = f.AirportTo.Name,
                 LeavingTime = f.LeavingTime,
                 Arrives = f.Arrives,
-                Name = f.Name,
+                Name = f.AirportFrom.Name + " - " + f.AirportTo.Name,
                 Coast = f.Coast
             }).FirstOrDefault(f => f.Id == id);
         }
