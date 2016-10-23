@@ -42,8 +42,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FlightsService.cs" />
+    <Compile Include="Services\HtmlFormer.cs" />
+    <Compile Include="Services\SmtpService.cs" />
+    <Compile Include="Services\TicketService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\00.Common\00.Common.csproj">
+      <Project>{10e8b4c9-f9f5-4aed-aae6-ba03e3a0884f}</Project>
+      <Name>00.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\01.Domain\01.Domain.csproj">
       <Project>{BF7859DB-79C9-4F00-83EC-832747A1C5D1}</Project>
       <Name>01.Domain</Name>

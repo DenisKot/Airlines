@@ -3,43 +3,46 @@
     ViewBag.Title = "Замовлення";
 }
 
-<div class="container">
+<div class="container" ng-init="id = @ViewBag.model.Id">
     <form name="myForm" action="@Url.Action("Ticket", "Buy")">
+        <input type="text" name="id" ng-model="id" style="display: none;"/>
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-md-8 buy-form">
                 <h2 align="center">Замовлення авіаквитка</h2>
                 <h2 align="center">@ViewBag.model.Name</h2>
                 <h2 align="center">Вартість: @ViewBag.model.Coast грн.</h2>
-                <hr />
+                <hr/>
                 <div>
                     <h2 class="firstcol">ФИО*:</h2>
                     @* ng-class="{'error': myForm.userName.$error.required}"  *@
-                    <input class="secondcol" type="text" name="userName" ng-model="userName"  required />
+                    <input class="secondcol" type="text" name="userName" ng-model="userName" required/>
                 </div>
                 <div>
                     <h2 class="firstcol">Емейл*:</h2>
                     @*  ng-class="{'error': myForm.email.$error.required}" *@
-                    <input class="secondcol" type="email" name="email" ng-model="email" required />
+                    <input class="secondcol" type="email" name="email" ng-model="email" required/>
                 </div>
                 <div>
                     <h2 class="firstcol">Номер карти*:</h2>
                     @* ng-class="{'error': !myForm.card.$valid}"  *@
                     <input class="secondcol" type="text" tooltip="16 цифер" name="card" ng-model="card" pattern="[0-9]{16}" required maxlength="16" placeholder="1234 1234 1234 1234"/>
-                    <div title="16 цифер" style="cursor: pointer; margin: auto 0; margin-left: 9px;"><h4>?</h4></div>
+                    <div title="16 цифер" style="cursor: pointer; margin: auto 0; margin-left: 9px;"><h4>?</h4>
+                    </div>
                 </div>
                 <div>
                     <h2 class="firstcol">Секретний пароль*:</h2>
                     @* ng-class="{'error': !myForm.secret.$valid}"  *@
                     <input class="secondcol" type="text" name="secret" ng-model="secret" pattern="[0-9]{3}" required placeholder="123"/>
-                    <div title="3 цифри" style="cursor: pointer; margin: auto 0; margin-left: 9px;"><h4>?</h4></div>
+                    <div title="3 цифри" style="cursor: pointer; margin: auto 0; margin-left: 9px;"><h4>?</h4>
+                    </div>
                 </div>
                 <div>
                     <h2 class="firstcol"></h2>
                     @*  ng-disabled="!myForm.secret.$valid || !myForm.card.$valid || myForm.email.$error.required || myForm.userName.$error.required" *@
                     <input type="submit"
-                            class="btn btn-warning my-btn"
-                            style="font-size: 28px; width: 280px; height: 60px;" title="Оплатити">
+                           class="btn btn-warning my-btn"
+                           style="font-size: 28px; width: 280px; height: 60px;" title="Оплатити">
                     </input>
                 </div>
             </div>
