@@ -23,14 +23,14 @@ namespace Airlines.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Компанія специфікуться на перевезенні пасажирів по всьому світові.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Контактна сторінка";
 
             return View();
         }
