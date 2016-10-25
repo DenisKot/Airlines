@@ -1,6 +1,6 @@
 ﻿@using _00.Common
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Замовлення авіаквитків";
 }
 <div class="filter">
     <form name="searchForm" action="@Url.Action("Index", "Home")">
@@ -30,7 +30,7 @@
     <table class="table" style="margin-top: 5px;">
         <thead>
         <tr>
-            <th>Id</th>
+            @*<th>Id</th>*@
             <th>Назва</th>
             <th>Дата вильоту</th>
             <th>Дата приземлення</th>
@@ -45,7 +45,7 @@
             foreach (var flight in ViewBag.list)
             {
                 <tr url="@Url.Action("Flight", "Detail", new {id = flight.Id})" class="highlight @(i++%2 == 0 ? "odd" : "")">
-                    <td class="col-md-1">@flight.Id</td>
+                    @*<td class="col-md-1">@flight.Id</td>*@
                     <td class="col-md-2">@flight.Name</td>
                     <td class="col-md-2">@DateTimeExpression.ToDayMonthYear(flight.LeavingTime)</td>
                     <td class="col-md-2">@DateTimeExpression.ToDayMonthYear(flight.Arrives)</td>

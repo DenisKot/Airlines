@@ -13,9 +13,9 @@ namespace Airlines.Controllers
             this.flightsService = new FlightsService();
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string from, string to)
         {
-            var list = this.flightsService.GetList();
+            var list = this.flightsService.GetList(from, to);
             ViewBag.list = list;
 
             return View();
